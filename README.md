@@ -17,8 +17,8 @@ example:
         const app = express();
         const bodyParser = require('body-parser')
 
-        app.use(bodyParser.json({limit: '16mb', extended: true}));
-        app.use(bodyParser.urlencoded({limit: '16mb', extended: true}))
+        app.use(bodyParser.json({limit: '16mb', extended: true}));     // Make sure you add these two lines
+        app.use(bodyParser.urlencoded({limit: '16mb', extended: true}))    //Make sure you add these two lines
 
         mongoose.connect(uri,{          // pay attention to URI
             dbName:'Blog-Name',        // pay attention here
