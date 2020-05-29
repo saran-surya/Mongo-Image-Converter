@@ -46,7 +46,7 @@ To pull the Converter in react
 
         import {Convert} from 'mongo-image-converter';
 
-# Invoking the function
+# Creating the Helper function  [ add them in the desired place in REACT and Angular ]
 
 It is important that you should use the function only with async and await !!
 
