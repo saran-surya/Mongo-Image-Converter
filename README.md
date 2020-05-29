@@ -78,9 +78,25 @@ example:
         const [imageFile, setImageFile] = useState('');
 
         function App() {
+                const convertImage = async (event) => {
+                try {
+                        const convertedImage = await Convert(imageFile)
+                        if( convertedImage ){
+                                console.log(convertedImage);
+                                // after this pass it to the backend using your fav API,
+                        } else{
+                                console.log('The file is not in format of image/jpeg or image/png')
+                         }
+                        }       
+                catch (error) {
+                        console.warn(error.message)
+                        }
+                        }
+        
+            return(
             <input type = 'file' onChange = {(e) => setImageFile( e.target.files[0] ) } />
             <button onClick = { convertImage } > Submit </ button>
-        }
+        )}
 
         export default App;
 
