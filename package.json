@@ -1,6 +1,6 @@
 {
   "name": "mongo-image-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple image converter to upload files to mongo DB",
   "main": "index.js",
   "scripts": {
