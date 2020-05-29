@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "simple image converter to upload files to mongo DB",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saran-surya/Mongo-Image-Converter.git"
@@ -18,9 +15,12 @@
     "mongoConverter"
   ],
   "author": "Saran Surya",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/saran-surya/Mongo-Image-Converter/issues"
   },
-  "homepage": "https://github.com/saran-surya/Mongo-Image-Converter#readme"
+  "homepage": "https://github.com/saran-surya/Mongo-Image-Converter#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
