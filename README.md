@@ -128,7 +128,7 @@ The retrived data from the DataBase should be filtered for the correct field and
 
         and set them to the source of an Image using the regular Methods in REACT and ANGULAR
 
-        < img src = {The data pulled and filtered pointing the dataURL off the image} >
+        < img src = {The data pulled and filtered pointing the dataURL of the image} >
 
 
 
