@@ -17,8 +17,8 @@ example:
         const app = express();
         const bodyParser = require('body-parser')
 
-        app.use(bodyParser.json({limit: '16mb', extended: true}));
-        app.use(bodyParser.urlencoded({limit: '16mb', extended: true}))
+        app.use(bodyParser.json({limit: '16mb', extended: true}));     // Make sure you add these two lines
+        app.use(bodyParser.urlencoded({limit: '16mb', extended: true}))    //Make sure you add these two lines
 
         mongoose.connect(uri,{          // pay attention to URI
             dbName:'Blog-Name',        // pay attention here
@@ -46,7 +46,7 @@ To pull the Converter in react
 
         import {Convert} from 'mongo-image-converter';
 
-# Invoking the function
+# Creating the Helper function  [ add them in the desired place in REACT and Angular ]
 
 It is important that you should use the function only with async and await !!
 
@@ -78,9 +78,25 @@ example:
         const [imageFile, setImageFile] = useState('');
 
         function App() {
+                const convertImage = async (event) => {
+                try {
+                        const convertedImage = await Convert(imageFile)
+                        if( convertedImage ){
+                                console.log(convertedImage);
+                                // after this pass it to the backend using your fav API,
+                        } else{
+                                console.log('The file is not in format of image/jpeg or image/png')
+                         }
+                        }       
+                catch (error) {
+                        console.warn(error.message)
+                        }
+                        }
+        
+            return(
             <input type = 'file' onChange = {(e) => setImageFile( e.target.files[0] ) } />
             <button onClick = { convertImage } > Submit </ button>
-        }
+        )}
 
         export default App;
 
@@ -112,7 +128,7 @@ The retrived data from the DataBase should be filtered for the correct field and
 
         and set them to the source of an Image using the regular Methods in REACT and ANGULAR
 
-        < img src = {The data pulled and filtered} >
+        < img src = {The data pulled and filtered pointing the dataURL of the image} >
 
 
 
