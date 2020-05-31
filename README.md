@@ -4,7 +4,7 @@ This package helps you convert the images files you need to upload to mongoDB ((
 
 # Installation
 
-**npm i --save mongo-image-converter**
+## **npm i --save mongo-image-converter**
 
 # Note on using with MONGOOSE
 
