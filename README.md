@@ -1,15 +1,16 @@
-# Mongo-Image-Converter
+# mongo-image-converter
 This package helps you convert the images files you need to upload to mongoDB ((without)) GRIDfs or MULTER
 
 
 # Installation
-npm i --save mongo-image-converter
+
+**npm i --save mongo-image-converter**
 
 # Note on using with MONGOOSE
 
 Please feel Free to use Grid-fs if you need to store files greater than (16mb) to MongoDB
 
-Please use the middleware "body-parser" !!
+***Please use the middleware "body-parser" !!***
 
 example:
 
