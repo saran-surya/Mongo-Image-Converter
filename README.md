@@ -39,14 +39,14 @@ example:
 # Data Format
 The data Format used in this module is ((data:image/png;base64)) and (( data:image/jpeg;base64 ))
 
--- The format will be so long to copy and paste, so please use React-Hooks or dynamic assigns in Angular to assign them to Image sources 
+- The format will be so long to copy and paste, so please use React-Hooks or dynamic assigns in Angular to assign them to Image sources 
 
 Please follow below for examples
 
 # Outputs
 If the data passed in is in the type of "image/jpeg" or "image/png" ***It will return the converted image in base 64***
-###### else
-The value returned will be **false** and you can promt for an image to the user
+## else
+- The value returned will be **false** and you can promt for an image to the user
 
 # Adding the Converter in REACT
 
