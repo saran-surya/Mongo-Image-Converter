@@ -43,6 +43,11 @@ The data Format used in this module is ((data:image/png;base64)) and (( data:ima
 
 Please follow below for examples
 
+# Outputs
+If the data passed in is in the type of "image/jpeg" or "image/png" ***It will return the converted image in base 64***
+###### else
+The value returned will be **false** and you can promt for an image to the user
+
 # Adding the Converter in REACT
 
 To pull the Converter in react 
