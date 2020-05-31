@@ -11,6 +11,7 @@ This package helps you convert the images files you need to upload to mongoDB ((
 Please feel Free to use Grid-fs if you need to store files greater than (16mb) to MongoDB
 
 ***Please use the middleware "body-parser" !!***
+***Make sure you convert the image inside a component, and then pass it to the backend as a string***
 
 example:
 
@@ -112,7 +113,7 @@ example:
 
         const schemaName = new mongoose.Schema({
             Image : {
-                type : String,
+                type : String,                //***This Schema should be mentioned as a string***
                 required: true
             }
         })
