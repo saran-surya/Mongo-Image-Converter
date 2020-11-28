@@ -109,7 +109,7 @@ example:
         export default App;
 
 # Uploading to MongoDB
-
+(**In server.js**)
 You must declare the Mongoose Schema with a place for Image with type of "String"
 
 this code below will get you started, you can add additional data if required
