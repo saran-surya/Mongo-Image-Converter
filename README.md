@@ -14,7 +14,7 @@ Please feel Free to use Grid-fs if you need to store files greater than (16mb) t
 
  - ***Make sure you convert the image inside a component, and then pass it to the backend as a string***
 
-example:
+example: (**In Node JS server.js file**)
 
         const express = require('express');
         const app = express();
