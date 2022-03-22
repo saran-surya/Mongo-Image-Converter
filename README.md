@@ -15,7 +15,7 @@ Please feel Free to use Grid-fs if you need to store files greater than (16mb) t
  - ***Make sure you convert the image inside a component, and then pass it to the backend as a string***
 
 example: (**In Node JS server.js file**)
-
+```
         const express = require('express');
         const app = express();
         const bodyParser = require('body-parser')
@@ -33,7 +33,7 @@ example: (**In Node JS server.js file**)
         }).catch(err=>{
         console.log(err.message);
         })
-
+```
 // the main reason to use them is to prevent limiting the upload constrains
 
 # Data Format
@@ -51,15 +51,15 @@ If the data passed in is in the type of "image/jpeg" or "image/png" ***It will r
 # Adding the Converter in REACT
 
 To pull the Converter in react 
-
+```
         import {Convert} from 'mongo-image-converter';
-
+```
 # Creating the Helper function  [ add them in the desired place in REACT and Angular ]
 
 It is important that you should use the function only with async and await !!
 
 example:
-
+```
     const convertImage = async (event) => {
         try {
         const convertedImage = await Convert(imageFile)
@@ -74,13 +74,13 @@ example:
         }
     }
 
-
+```
 # Using in react
         
 Get your input as a file and store the file using state, You can also use the useState method
 
 example:
-
+```
         import React, {useState} from 'react';
 
         const [imageFile, setImageFile] = useState('');
@@ -107,7 +107,7 @@ example:
         )}
 
         export default App;
-
+```
 # Uploading to MongoDB
 (**In server.js**)
 You must declare the Mongoose Schema with a place for Image with type of "String"
@@ -115,6 +115,7 @@ You must declare the Mongoose Schema with a place for Image with type of "String
 this code below will get you started, you can add additional data if required
 
 example: 
+```
         const mongoose = require('mongoose')
 
         const schemaName = new mongoose.Schema({
@@ -125,7 +126,7 @@ example:
         })
 
         module.exports = mongoose.model('schemaName', Schema)
-
+```
 # Uploading
 
 The rest of all the process reamins the same, now you can upload Images and also retrive them as the regular method using "MONGOOSE", It will work the same way 
